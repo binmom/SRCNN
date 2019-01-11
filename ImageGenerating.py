@@ -38,7 +38,7 @@ class SRCNN(nn.Module):
 name = 'Baby'
 test_loader = testset(name)
 
-model = torch.load("C:\\Users\\user\\Desktop\\study\\pytorch\\Project_1 SRCNN\\model1.pth")
+model = torch.load("model1.pth")
 with torch.no_grad():
 	for data in test_loader:
 		images, labels = data

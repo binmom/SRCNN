@@ -12,7 +12,7 @@ import cv2
 import os
 
 def data_load():
-	transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
+	transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
 
 	data_path = './datasets/Train_Blurred/'
 	target_path = './datasets/Train_Cropped/'
@@ -32,7 +32,7 @@ def data_load():
 	return train_loader
 
 def testset(name):
-	transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
+	transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
 	data_path = './'+ 'testsets' +'/' + name
 	target_path = './'+ 'targets' +'/' + name
 	test_dataset = torchvision.datasets.ImageFolder(root = data_path, transform = transform)

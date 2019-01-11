@@ -58,7 +58,7 @@ for epoch in range(300):
 		optimizer.step()
 
 print('Finish Training')
-# torch.save(net,"C:\\Users\\user\\Desktop\\study\\pytorch\\Project_1 SRCNN\\model.pth")
+# torch.save(net,"model.pth")
 
 ### test_loadeing
 
@@ -67,7 +67,7 @@ test_loader = testset(name)
 
 ## test
 
-# model = torch.load("C:\\Users\\user\\Desktop\\study\\pytorch\\Project_1 SRCNN\\model.pth")
+# model = torch.load("model.pth")
 MSE = 0.0
 with torch.no_grad():
 	for data in test_loader:

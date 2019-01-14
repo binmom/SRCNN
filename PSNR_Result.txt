@@ -1,0 +1,10 @@
+		PSNR		Paper PSNR	Bicubic
+
+Baby		33.48		35.01		33.91
+Bird		32.83		34.91		32.58
+Butterfly	26.40		27.58		24.04
+Head		26.93		33.55		32.88
+Woman		30.00		30.92		28.56
+
+Cause our epoch is only 100, paper's PSNR is superior to us.
+However our imperfect model show competitiveness to our Bicubic Interpolation Method

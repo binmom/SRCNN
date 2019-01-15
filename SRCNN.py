@@ -40,12 +40,16 @@ optimizer = optim.SGD(net.parameters(), lr = 0.001, momentum = 0.80)
 
 print('Training Start')
 
-for epoch in range(300):
+for epoch in range(20):
 	for i, data in enumerate(train_loader, 0):
+		l1 = 0
 		inputs, labels = data
 		optimizer.zero_grad()
 		outputs = net(inputs)
 		loss = criterion(outputs, labels)
+		for p in net.parameters():
+			l1 = l1 + p.abs().sum()
+		loss = loss + l1 * 0.01
 		loss.backward()
 		optimizer.step()
 

@@ -49,7 +49,7 @@ for epoch in range(100):
 		loss = criterion(outputs, labels)
 		for p in net.parameters():
 			l1 = l1 + p.abs().sum()
-		loss = loss + l1 * 0.000 ### There is no regularization in my model.pt
+		loss = loss + l1 * 0.000 ### There is no regularization in my model.pth
 		loss.backward()
 		optimizer.step()
 
